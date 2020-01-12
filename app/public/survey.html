@@ -16,37 +16,46 @@
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-<style>
-    body {
-        background-color: #BABFBD;
-    }
-    h2, p {
-        font-family: 'Lato', sans-serif;
-    }
-    p {
-        font-size: 18px;
-    }
-    .btn {
-        background-color: #31403E;
-        border-color:#31403E;
-    }
-    .btn:hover {
-        background-color: #A6786D;
-    }
-    .links {
-        color: #73544D;
-        font-family: 'Lato', sans-serif;
-        font-size: 16px;
-    }
-    .modal-content {
-        background-color: #A6786D;
-        color: #F2EDE4
-    }
-    #close-btn {
-        background-color: #BABFBD;
-        color: #31403E;
-    }
-</style>
+    <style>
+        body {
+            background-color: #BABFBD;
+        }
+
+        h2,
+        p {
+            font-family: 'Lato', sans-serif;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .btn {
+            background-color: #31403E;
+            border-color: #31403E;
+        }
+
+        .btn:hover {
+            background-color: #A6786D;
+        }
+
+        .links {
+            color: #73544D;
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+        }
+
+        .modal-content {
+            background-color: #A6786D;
+            color: #F2EDE4
+        }
+
+        #close-btn {
+            background-color: #31403E;
+            border-color: #31403E;
+            color: #BABFBD;
+        }
+    </style>
 
 </head>
 
@@ -224,16 +233,12 @@
         <hr>
         <footer class="footer">
             <div class="container">
-                <p><a class="links" href="/api/friends">API Friends List</a> | <a class="links"
+                <p><a class="links" href="/">Home</a> | <a class="links" href="/api/friends">API Friends List</a> | <a class="links"
                         href="https://github.com/joditivis/FriendFinder">GitHub Repo</a></p>
             </div>
         </footer>
 
     </div>
-
-</body>
-
-</html>
 
 <script type="text/javascript">
 
@@ -249,18 +254,11 @@
                     isValid = false;
                 }
             });
-
-            $(".chosen-select").each(function () {
-
-                if ($(this).val() === "") {
-                    isValid = false;
-                }
-            });
             return isValid;
         }
 
         // if all fields are filled
-        if (validateForm()) {
+        if (validateForm() == true) {
 
             // grab user inputs from survey
             var newFriendData = {
@@ -281,17 +279,38 @@
                     ]
             };
 
-            $.post("/api/friends", newFriendData, function (data) {
+            // get current URL of website
+            var currentURL = window.location.origin;
+
+            $.post(currentURL + "/api/friends", newFriendData, function (data) {
 
                 $("#friend-name").text(data.name);
                 $("#friend-photo").attr("src", data.photo);
 
                 // Show the modal with the best match
                 $("#results-modal").modal("toggle");
-            });
+            })
+            // clear form selections after user clicks submit
+            $("#name").val("");
+            $("#photo").val("");
+            $("#question1").val("");
+            $("#question2").val("");
+            $("#question3").val("");
+            $("#question4").val("");
+            $("#question5").val("");
+            $("#question6").val("");
+            $("#question7").val("");
+            $("#question8").val("");
+            $("#question9").val("");
+            $("#question10").val("");
+
         } else {
             alert("Please fill out all fields. Thanks a bunch.");
-        }
+        };
     });
 
 </script>
+
+</body>
+
+</html>
