@@ -26,7 +26,7 @@
         <h2>Survey</h2>
         <hr>
 
-        <h4><strong>About You</strong></h2>
+        <h4><strong>About You</strong></h4>
             <h4>Name (required)</h4>
             <input type="text" id="name" class="form-control" required>
 
@@ -39,107 +39,125 @@
 
             <h4><strong>1.</strong></h4>
             <h4>You really enjoy being outdoors.</h4>
-            <select class="chosen-select" id="question1">
-                <option value=""></option>
+            <select id="question1">
+                <option value="" disabled selected>Select</option>
                 <option value="1">1 (strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5 (strongly agree)</option>
             </select>
+
+            <br>
 
             <h4><strong>2.</strong></h4>
             <h4>You would rather have a plan over being spontaneous.</h4>
-            <select class="chosen-select" id="question2">
-                <option value=""></option>
+            <select id="question2">
+                <option value="" disabled selected>Select</option>
                 <option value="1">1 (strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5 (strongly agree)</option>
             </select>
+
+            <br>
 
             <h4><strong>3.</strong></h4>
             <h4>You would rather play games with friends over watching a movie.</h4>
-            <select class="chosen-select" id="question3">
-                <option value=""></option>
+            <select id="question3">
+                <option value="" disabled selected>Select</option>
                 <option value="1">1 (strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5 (strongly agree)</option>
             </select>
+
+            <br>
 
             <h4><strong>4.</strong></h4>
             <h4>You prefer warm vacations over cold.</h4>
-            <select class="chosen-select" id="question4">
-                <option value=""></option>
+            <select id="question4">
+                <option value="" disabled selected>Select</option>
                 <option value="1">1 (strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5 (strongly agree)</option>
             </select>
+
+            <br>
 
             <h4><strong>5.</strong></h4>
             <h4>You are optimistic about most things.</h4>
-            <select class="chosen-select" id="question5">
-                <option value=""></option>
+            <select id="question5">
+                <option value="" disabled selected>Select</option>
                 <option value="1">1 (strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5 (strongly agree)</option>
             </select>
+
+            <br>
 
             <h4><strong>6.</strong></h4>
             <h4>You prefer being alone over being around big groups of people.</h4>
-            <select class="chosen-select" id="question6">
-                <option value=""></option>
+            <select id="question6">
+                <option value="" disabled selected>Select</option>
                 <option value="1">1 (strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5 (strongly agree)</option>
             </select>
+
+            <br>
 
             <h4><strong>7.</strong></h4>
             <h4>You are always thinking of unexplored possibilities.</h4>
-            <select class="chosen-select" id="question7">
-                <option value=""></option>
+            <select id="question7">
+                <option value="" disabled selected>Select</option>
                 <option value="1">1 (strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5 (strongly agree)</option>
             </select>
+
+            <br>
 
             <h4><strong>8.</strong></h4>
             <h4>You don't mind roughing it while camping.</h4>
-            <select class="chosen-select" id="question8">
-                <option value=""></option>
+            <select id="question8">
+                <option value="" disabled selected>Select</option>
                 <option value="1">1 (strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5 (strongly agree)</option>
             </select>
+
+            <br>
 
             <h4><strong>9.</strong></h4>
             <h4>You enjoy finding new and unique restaurants and food.</h4>
-            <select class="chosen-select" id="question9">
-                <option value=""></option>
+            <select id="question9">
+                <option value="" disabled selected>Select</option>
                 <option value="1">1 (strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5 (strongly agree)</option>
             </select>
+
+            <br>
 
             <h4><strong>10.</strong></h4>
             <h4>Fitness and being active is really important to you.</h4>
-            <select class="chosen-select" id="question10">
-                <option value=""></option>
+            <select id="question10">
+                <option value="" disabled selected>Select</option>
                 <option value="1">1 (strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -150,93 +168,78 @@
             <br>
             <br>
 
-            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit-button"><i class="fa fa-check-circle"
                     aria-hidden="true"></i> Submit</button>
 
             <!-- Friend Match Modal -->
-            <div class="modal fade" id="friendModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
+            <div id="results-modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalCenterTitle">Your friend match!</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title"><strong> Your friend match! Wowza you guys are going to get along so
+                                    well!</strong></h2>
                         </div>
                         <div class="modal-body">
-                            <h3 class="friend-name"></h3>
-                            <img class="friend-photo" src="#">
+                            <h2 id="friend-name"></h2>
+                            <img id="friend-photo" src="#" alt="">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>>
 
-            <hr>
-            <footer class="footer">
-                <div class="container">
-                    <p><a href="/api/friends">API Friends List</a> | <a
-                            href="https://github.com/joditivis/FriendFinder">GitHub Repo</a></p>
+                    <hr>
+                    <footer class="footer">
+                        <div class="container">
+                            <p><a href="/api/friends">API Friends List</a> | <a
+                                    href="https://github.com/joditivis/FriendFinder">GitHub Repo</a></p>
+                        </div>
+                    </footer>
+
                 </div>
-            </footer>
 
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+                <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+                    crossorigin="anonymous"></script>
 </body>
 
 </html>
 
 <script type="text/javascript">
 
-    $("#submit").on("click", function (event) {
+    // activate submit button
+    $("#submit-button").on("click", function (event) {
         event.preventDefault();
 
-        function formValidation() {
-            var isValid = true;
+            // grab user inputs from survey
+            var newFriendData = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                surveyNums:
+                    [
+                        $("#question1").val(),
+                        $("#question2").val(),
+                        $("#question3").val(),
+                        $("#question4").val(),
+                        $("#question5").val(),
+                        $("#question6").val(),
+                        $("#question7").val(),
+                        $("#question8").val(),
+                        $("#question9").val(),
+                        $("#question10").val()
+                    ]
+            };
 
-            $(".form-control").each(function () {
+            $.post("/api/friends", newFriendData).done(function (data) {
 
-                if ($("#name").val() === "" || $("#photo").val() === "") {
-                    isValid = false;
+                $("#friend-name").html(data.name);
+                $("#friend-photo").attr("src", data.photo);
 
-                } else if ($("#question1").val() === "" || $("#question2").val() === "" || $("#question3").val() === "" || $("#question4").val() === "" || $("#question5").val() === "" || $("#question6").val() === "" || $("#question7").val() === "" || $("#question8").val() === "" || $("#question9").val() === "" || $("#question10").val() === "") {
-                    isValid = false;
-                }
-
-                if (isValid = true) {
-                    // grab survey elements
-                    var newFriendData = {
-                        name: $("#name").val().trim(),
-                        photo: $("#photo").val().trim(),
-                        surveyNums:
-                            [
-                                $("#question1").val(),
-                                $("#question2").val(),
-                                $("#question3").val(),
-                                $("#question4").val(),
-                                $("#question5").val(),
-                                $("#question6").val(),
-                                $("#question7").val(),
-                                $("#question8").val(),
-                                $("#question9").val(),
-                                $("#question10").val()
-                            ]
-                    };
-                    var usersCurrentURL = window.location.origin;
-
-                    $.post(usersCurrentURL + "/api/friends", newFriendData, function (data) {
-                        $(".friend-name").text(data.name);
-                        $(".friend-photo").attr("src", data.photo);
-                        $("#friendModal").modal("toggle");
-                    });
-                } else { 
-                    alert("Please fill in all fields of the survey.")
-                }
+                // Show the modal with the best match
+                $("#results-modal").modal("toggle");
             });
         }
     });
