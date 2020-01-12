@@ -1,6 +1,6 @@
 # FriendFinder
 
-**Link to App: https://git.heroku.com/limitless-headland-33180.git**
+**Link to App: https://limitless-headland-33180.herokuapp.com/**
 
 # About:
 University of Denver Coding Boot Camp 13th week assignment: This assignmet required us to create a Friend Finder App using Express and Node.js
