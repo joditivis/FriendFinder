@@ -3,12 +3,12 @@
 **Link to App:**
 
 # About:
-University of Denver Coding Boot Camp 13th week assignment: This assigmnet required us to create a Friend Finder App using Express and Node.js
+University of Denver Coding Boot Camp 13th week assignment: This assignmet required us to create a Friend Finder App using Express and Node.js
 
 # How it works:
 ```
 - Friend Finder is an application for finding a friend with like-minded interests.
-- The user will fill out a short 10 question survey, their answers will then be compared to another user's and it will return to them their name and photo of their closest friend match.
+- The user will fill out a short 10 question survey, their answers will then be compared to another user's and it will return the name and photo of their closest friend match.
 ```
 
 # Tools + Languages Used:
