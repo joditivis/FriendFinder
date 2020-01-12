@@ -16,8 +16,10 @@ University of Denver Coding Boot Camp 13th week assignment: This assignmet requi
 * CSS
 * Bootstrap
 * JavaScript
-* Express
+* jQuery
+* Express.js
 * Node.js
+* Deployed with Heroku
 
 # Features:
 ![Image](screenshots/ff.png)
