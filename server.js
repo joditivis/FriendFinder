@@ -9,10 +9,6 @@ var app = express();
 // sets an initial port
 var PORT = process.env.PORT || 8080;
 
-
-// path to access css files
-app.use(express.static(path.join(__dirname, "./app/css")));
-
 // middleware for parsing incoming request bodies
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
