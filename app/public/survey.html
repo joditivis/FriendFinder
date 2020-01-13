@@ -221,7 +221,7 @@
                     </div>
                     <div class="modal-body">
                         <h4 id="friend-name"></h4>
-                        <img id="friend-photo" src="" alt="">
+                        <img id="friend-photo" src="" width="250px" height="200px" alt="">
                     </div>
                     <div class="modal-footer">
                         <button type="button" id="close-btn" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -283,9 +283,10 @@
             var currentURL = window.location.origin;
 
             $.post(currentURL + "/api/friends", newFriendData, function (data) {
+                console.log(data);
 
-                $("#friend-name").text(data.name);
-                $("#friend-photo").attr("src", data.photo);
+                $("#friend-name").text(data.matchName);
+                $("#friend-photo").attr("src", data.matchPhoto);
 
                 // Show the modal with the best match
                 $("#results-modal").modal("toggle");
