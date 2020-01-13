@@ -2,7 +2,7 @@ var friends = [
     {
         name: "Monica",
         photo: "http://www2.pictures.zimbio.com/mp/Cw-NvzmXZ9Wl.jpg",
-        surveyNums: [5,5,5,3,1,3,2,3,5,5]
+        surveyNums: [4,5,5,3,1,3,2,3,5,5]
     },
     {
         name: "Rachael",
